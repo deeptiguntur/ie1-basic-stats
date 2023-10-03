@@ -27,7 +27,7 @@ public class BasicStats {
     CountView countView = new CountView();
     MeanView meanView = new MeanView();
     MedianView medianView = new MedianView();
-    MinMaxCaluclation minMaxView = new MinMaxCaluclation();
+    MinMaxCalculation minMaxView = new MinMaxCalculation();
     ModeView modeView = new ModeView();
     NumbersView numbersView = new NumbersView();
     AddNumView addNumView = new AddNumView();

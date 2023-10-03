@@ -8,7 +8,7 @@ import java.awt.FlowLayout;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
 
-public class MinMaxCaluclation implements View {
+public class MinMaxCalculation implements View {
 
     double min;
     double max;
@@ -16,7 +16,7 @@ public class MinMaxCaluclation implements View {
     JTextField jtfMax;
     String name;
 
-    public MinMaxCaluclation() {
+    public MinMaxCalculation() {
         min = 0;
         max = 0;
         jtfMin = new JTextField(10);
