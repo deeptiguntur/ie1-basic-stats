@@ -27,6 +27,7 @@ public class BasicStats {
     CountView countView = new CountView();
     MeanView meanView = new MeanView();
     MedianView medianView = new MedianView();
+    MinMaxCaluclation minMaxView = new MinMaxCaluclation();
     ModeView modeView = new ModeView();
     NumbersView numbersView = new NumbersView();
     AddNumView addNumView = new AddNumView();
@@ -37,6 +38,7 @@ public class BasicStats {
     statsViews.add(countView);
     statsViews.add(medianView);
     statsViews.add(meanView);
+    statsViews.add(minMaxView);
     statsViews.add(modeView);
 
     /***** REGISTER MVC BLOCK *****/
@@ -151,6 +153,45 @@ public class BasicStats {
 
       return mode;
     }
+
+    public static double min(double... numbers) {
+    bubbleSort(numbers);
+
+    int size = numbers.length;
+    if (size == 0) {
+        throw new IllegalArgumentException("Array is empty.");
+    }
+
+    double min = numbers[0];
+
+    for (int i = 1; i < size; i++) {
+        if (numbers[i] < min) {
+            min = numbers[i];
+        }
+    }
+
+    return min;
+    }
+
+    public static double max(double... numbers) {
+    bubbleSort(numbers);
+
+    int size = numbers.length;
+    if (size == 0) {
+        throw new IllegalArgumentException("Array is empty.");
+    }
+
+    double max = numbers[0];
+
+    for (int i = 1; i < size; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+
+    return max;
+    }
+
 
     //Helper method
     public static void bubbleSort(double[] numArray) {
